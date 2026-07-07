@@ -270,6 +270,23 @@
     .cta-band { padding: 80px 0; }
   }
 
+  /* Fix distribuzione mobile (solo <=700px, desktop invariato) */
+  @media (max-width: 700px) {
+    .pricing-grid { grid-template-columns: 1fr !important; }
+    .foot-top { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .kds-grid { grid-template-columns: 1fr 1fr !important; }
+  }
+  @media (max-width: 560px) {
+    .kds-grid { grid-template-columns: 1fr !important; }
+    .nav-cta { gap: 8px; }
+    .nav-cta .btn { padding: 0 11px; font-size: 12px; }
+    .num-cell:last-child { border-bottom: none; }
+    .num-cell { padding: 40px 24px; text-align: center; }
+    .modal-box { padding: 28px 22px; }
+    .card-sub { max-width: none; }
+    .foot-bot { flex-direction: column; align-items: flex-start; gap: 12px; }
+  }
+
   /* Contact Modal */
   .modal-overlay {
     display: none;
@@ -438,7 +455,7 @@
         <h3>Gli ordini arrivano in cucina, nell&rsquo;ordine giusto.</h3>
         <p class="card-sub">Ogni stazione vede solo i suoi piatti. Niente bigliettini, niente urla. Le portate in ritardo si segnalano da sole.</p>
         <div class="card-art">
-          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px; align-items: start;">
+          <div class="kds-grid" style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px; align-items: start;">
             <!-- T4 collassato -->
             <div class="ticket" style="font-size: 11px; padding: 8px 14px; overflow: hidden;">
               <div class="ln head" style="border-bottom: none; padding-bottom: 0; margin-bottom: 0;"><span>T4 · 02:14</span><span>●</span></div>
@@ -576,7 +593,7 @@
       <p>Nessuna sorpresa. Il setup è su preventivo.</p>
     </div>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 820px; margin: 0 auto;">
+    <div class="pricing-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 820px; margin: 0 auto;">
 
       <!-- BASE -->
       <div style="background: #fff; border: 1px solid var(--line); border-radius: var(--radius-l); padding: 36px; display: flex; flex-direction: column;">
@@ -641,7 +658,7 @@
   <div class="container">
 
     <!-- Top footer -->
-    <div style="display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: start; padding-bottom: 48px; border-bottom: 1px solid var(--line);">
+    <div class="foot-top" style="display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: start; padding-bottom: 48px; border-bottom: 1px solid var(--line);">
 
       <!-- Brand + contatti -->
       <div style="max-width: 320px;">
