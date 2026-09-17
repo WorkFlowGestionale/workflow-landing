@@ -100,6 +100,8 @@
   .meta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 28px; color: var(--ink-5); font-size: 13px; font-weight: 400; }
   .meta-row span.item { display: inline-flex; align-items: center; gap: 10px; line-height: 1; }
   .check { width: 8px; height: 8px; border-radius: 50%; background: var(--ink); flex: none; display: inline-block; }
+  /* Nell'hero i puntini sono separatori, non bollini: stesso grigio del testo. */
+  .meta-row .check { background: var(--ink-5); }
 
   /* Preview */
   .preview-wrap { padding: 0 0 80px; }
